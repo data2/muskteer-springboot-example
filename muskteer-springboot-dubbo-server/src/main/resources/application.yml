@@ -1,0 +1,10 @@
+spring:
+    dubbo :
+        application :
+            name : hello-world-app
+        registry :
+            address : zookeeper://10.143.130.62:2182
+        protocol :
+            name : dubbo
+            port : 20880
+        scan: com.muskteer.dubbo.server.service.impl
