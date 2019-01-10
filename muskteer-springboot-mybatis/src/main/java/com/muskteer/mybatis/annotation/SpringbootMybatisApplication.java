@@ -16,15 +16,15 @@ import java.util.List;
 @SpringBootApplication
 public class SpringbootMybatisApplication {
 
-	@Autowired
-	private PersonService personService;
+    @Autowired
+    private PersonService personService;
 
-	@RequestMapping("/list")
-	public List<Person> queryAll(){
-		return personService.queryAll();
-	}
+    @RequestMapping("/list")
+    public List<Person> queryAll() {
+        return personService.queryAll();
+    }
 
-	public static void main(String[] args) {
-		SpringApplication.run(SpringbootMybatisApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(SpringbootMybatisApplication.class, args);
+    }
 }

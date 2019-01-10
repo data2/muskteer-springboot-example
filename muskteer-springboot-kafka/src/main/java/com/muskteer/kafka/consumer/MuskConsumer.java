@@ -17,8 +17,8 @@ public class MuskConsumer {
     @KafkaListener(topics = "${kafka.topic}",
             containerFactory = "advancedKafkaListenerContainerFactory")
     public void receive(@Payload String payload,
-                        @Header(KafkaHeaders.RECEIVED_PARTITION_ID) int partition){
-        System.out.println(String.format("From partition %d : %s", partition, payload) );
+                        @Header(KafkaHeaders.RECEIVED_PARTITION_ID) int partition) {
+        System.out.println(String.format("From partition %d : %s", partition, payload));
     }
 
     @KafkaListener(
@@ -26,10 +26,10 @@ public class MuskConsumer {
             topicPartitions = @TopicPartition(
                     topic = "${kafka.topic.advancedtopic}",
                     partitionOffsets = @PartitionOffset(
-                            partition = "0" ,
+                            partition = "0",
                             initialOffset = "0")))
     public void receiveFromBegin(@Payload String payload,
                                  @Header(KafkaHeaders.RECEIVED_PARTITION_ID) int partition) {
-        System.out.println(String.format("Read all message from partition %d : %s", partition, payload) );
+        System.out.println(String.format("Read all message from partition %d : %s", partition, payload));
     }
 }

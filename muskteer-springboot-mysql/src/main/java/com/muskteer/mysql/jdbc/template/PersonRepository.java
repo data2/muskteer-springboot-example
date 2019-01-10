@@ -17,24 +17,23 @@ import java.util.Map;
  * Created by wanglei on 2018/2/26.
  */
 @Repository
-public class PersonRepository{
+public class PersonRepository {
 
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
     @Transactional(readOnly = true)
-    public List<Person> getPersonList(){
+    public List<Person> getPersonList() {
         List<Person> people = jdbcTemplate.query(
                 "select id, name from person", new RowPersonMapper());
         return people;
     }
 
     @Transactional
-    public int savePerson(Person person){
+    public int savePerson(Person person) {
         return jdbcTemplate.update("insert into person(id,name) values(?,?)",
-                new Object[]{person.getId(),person.getName()});
+                new Object[]{person.getId(), person.getName()});
     }
-
 
 
     /**

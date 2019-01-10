@@ -1,13 +1,13 @@
 # ds1库
-spring :
-    datasource :
-        ds1 :
-            url : jdbc:mysql://10.40.32.14:3306/udp?characterEncoding=UTF-8
-            username : udp
-            password : udp2016
-            driver-class-name : com.mysql.jdbc.Driver
-        ds2 :
-            url : jdbc:mysql://10.40.32.15:3306/udp?characterEncoding=UTF-8
-            username : udp
-            password : udp2016
-            driver-class-name : com.mysql.jdbc.Driver
+spring:
+  datasource:
+    ds1:
+      url: jdbc:mysql://10.40.32.14:3306/udp?characterEncoding=UTF-8
+      username: udp
+      password: udp2016
+      driver-class-name: com.mysql.jdbc.Driver
+    ds2:
+      url: jdbc:mysql://10.40.32.15:3306/udp?characterEncoding=UTF-8
+      username: udp
+      password: udp2016
+      driver-class-name: com.mysql.jdbc.Driver

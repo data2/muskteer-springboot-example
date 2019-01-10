@@ -24,9 +24,9 @@ public class MQProducer implements RabbitTemplate.ConfirmCallback, RabbitTemplat
 
     @Override
     public void confirm(CorrelationData correlationData, boolean b, String s) {
-        if (b){
+        if (b) {
             System.out.println("message send success :" + correlationData);
-        }else{
+        } else {
             System.out.println("message send fail :" + correlationData);
 
         }
@@ -38,7 +38,7 @@ public class MQProducer implements RabbitTemplate.ConfirmCallback, RabbitTemplat
         System.out.println(message.getMessageProperties().getCorrelationIdString() + " 发送失败");
     }
 
-    public  void send(String msg){
+    public void send(String msg) {
         CorrelationData correlationId = new CorrelationData(UUID.randomUUID().toString());
 
         System.out.println("开始发送消息 : " + msg.toLowerCase());

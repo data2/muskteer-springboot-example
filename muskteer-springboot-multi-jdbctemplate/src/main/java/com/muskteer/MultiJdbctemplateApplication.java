@@ -17,19 +17,19 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest(classes = DataSourceConfig.class)
 public class MultiJdbctemplateApplication {
 
-	@Autowired
-	@Qualifier("primaryJdbcTemplate")
-	protected JdbcTemplate primaryJdbcTemplate;
+    @Autowired
+    @Qualifier("primaryJdbcTemplate")
+    protected JdbcTemplate primaryJdbcTemplate;
 
-	@Autowired
-	@Qualifier("secondaryJdbcTemplate")
-	protected JdbcTemplate secondaryJdbcTemplate;
+    @Autowired
+    @Qualifier("secondaryJdbcTemplate")
+    protected JdbcTemplate secondaryJdbcTemplate;
 
-	@Test
-	public void test() throws Exception {
-		primaryJdbcTemplate.update("select 1 from dual ");
+    @Test
+    public void test() throws Exception {
+        primaryJdbcTemplate.update("select 1 from dual ");
 
-	}
+    }
 
 
 }

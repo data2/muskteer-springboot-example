@@ -13,7 +13,7 @@ public class PersonConsumerService {
     @Reference(version = "1.0.0")
     PersonService personService;
 
-    public void getRemotePersonService(){
+    public void getRemotePersonService() {
         System.out.println("begin call remote personservice.");
         personService.call();
         System.out.println("call remote personservice finish.");

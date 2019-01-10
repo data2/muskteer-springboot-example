@@ -21,17 +21,17 @@ public class RedisCacheTest {
     @Test
     public void testObject() throws InterruptedException {
         //对象 序列化
-        Person person=new Person("testName1111111");
-        ValueOperations<String, Person> operations=redisTemplate.opsForValue();
+        Person person = new Person("testName1111111");
+        ValueOperations<String, Person> operations = redisTemplate.opsForValue();
         operations.set("testKey1", person);
 //        operations.set("testKey1", person,1, TimeUnit.SECONDS);
 //        Thread.sleep(1000);
         //redisTemplate.delete("testKey");
-        boolean exists=redisTemplate.hasKey("testKey1");
-        if(exists){
+        boolean exists = redisTemplate.hasKey("testKey1");
+        if (exists) {
             System.out.println("exists is true");
             System.out.println(operations.get("testKey1").getName());
-        }else{
+        } else {
             System.out.println("exists is false");
         }
         // Assert.assertEquals("aa", operations.get("testKey1").getUserName());

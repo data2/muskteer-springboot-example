@@ -9,9 +9,9 @@ import org.springframework.context.ConfigurableApplicationContext;
 @SpringBootApplication(exclude = DataSourceAutoConfiguration.class)
 public class MultiMybatisApplicationDemo {
 
-	public static void main(String[] args) {
-		ConfigurableApplicationContext context = SpringApplication.run(MultiMybatisApplicationDemo.class, args);
-		OneMapper one = context.getBean(OneMapper.class);
-		System.out.println(one.testDSOne());
-	}
+    public static void main(String[] args) {
+        ConfigurableApplicationContext context = SpringApplication.run(MultiMybatisApplicationDemo.class, args);
+        OneMapper one = context.getBean(OneMapper.class);
+        System.out.println(one.testDSOne());
+    }
 }

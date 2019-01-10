@@ -18,7 +18,7 @@ public class RedisExample {
     private StringRedisTemplate stringRedisTemplate;
 
     @Test
-    public void test(){
+    public void test() {
         ValueOperations<String, String> s = stringRedisTemplate.opsForValue();
         System.out.println(s.get("test"));
     }

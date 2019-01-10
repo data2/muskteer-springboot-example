@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
  */
 public class Person {
     private String name;
+
     public Person(String name) {
         this.name = name;
     }

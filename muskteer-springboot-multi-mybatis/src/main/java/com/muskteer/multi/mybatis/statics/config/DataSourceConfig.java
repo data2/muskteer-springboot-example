@@ -15,17 +15,15 @@ public class DataSourceConfig {
 
     @Bean(name = "ds1")
     @ConfigurationProperties(prefix = "spring.datasource.ds1")
-    public DataSource dataSourceOne(){
+    public DataSource dataSourceOne() {
         return DataSourceBuilder.create().build();
     }
 
     @Bean(name = "ds2")
     @ConfigurationProperties(prefix = "spring.datasource.ds2")
-    public DataSource dataSourceTwo(){
+    public DataSource dataSourceTwo() {
         return DataSourceBuilder.create().build();
     }
-
-
 
 
 }

@@ -13,7 +13,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 public class SpringBootTestDemo {
 
     @Test
-    public void test(){
+    public void test() {
         System.out.println("springboot test");
     }
 }

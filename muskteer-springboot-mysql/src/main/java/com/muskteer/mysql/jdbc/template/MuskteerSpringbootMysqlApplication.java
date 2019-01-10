@@ -13,21 +13,21 @@ import java.util.List;
 @SpringBootApplication
 public class MuskteerSpringbootMysqlApplication {
 
-	@Autowired
-	private PersonRepository personRepository;
+    @Autowired
+    private PersonRepository personRepository;
 
-	@RequestMapping("/list")
-	public List<Person> listUser() {
-		List<Person> people=null;
-		try {
-			people=personRepository.getPersonList();
-		}catch (Exception e){
-			System.out.println("异常信息:  "+e.getMessage());
-		}
-		return people;
-	}
+    @RequestMapping("/list")
+    public List<Person> listUser() {
+        List<Person> people = null;
+        try {
+            people = personRepository.getPersonList();
+        } catch (Exception e) {
+            System.out.println("异常信息:  " + e.getMessage());
+        }
+        return people;
+    }
 
-	public static void main(String[] args) {
-		SpringApplication.run(MuskteerSpringbootMysqlApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(MuskteerSpringbootMysqlApplication.class, args);
+    }
 }

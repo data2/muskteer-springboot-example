@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class MuskteerSpringbootRabbitmqProducerApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(MuskteerSpringbootRabbitmqProducerApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(MuskteerSpringbootRabbitmqProducerApplication.class, args);
+    }
 }

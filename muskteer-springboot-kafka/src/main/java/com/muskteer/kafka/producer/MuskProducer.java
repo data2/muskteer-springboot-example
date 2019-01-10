@@ -14,8 +14,8 @@ public class MuskProducer {
     @Qualifier("muskKafkaTemplate")
     private KafkaTemplate<String, String> kafkaTemplate;
 
-    public void send(String topic , String payload, int messageCount) {
-        for(int i = 0; i< messageCount ;i++) {
+    public void send(String topic, String payload, int messageCount) {
+        for (int i = 0; i < messageCount; i++) {
             String message = String.format("Message %d %s", i, payload);
             kafkaTemplate.send(topic, message);
         }
