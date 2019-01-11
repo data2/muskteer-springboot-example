@@ -42,12 +42,8 @@
         <property name="maxIdleTime" value="1800"></property>
     </bean>
 
-    <bean id="hibernateTemplate" class="org.springframework.orm.hibernate5.HibernateTemplate">
-        <property name="sessionFactory" ref="sessionFactory"/>
-    </bean>
-
     <bean id="daoImpl" class="com.muskteer.spring.boot.hibernate.DaoImpl" >
-        <property name="hibernateTemplate" ref="hibernateTemplate"/>
+        <property name="sessionFactory" ref="sessionFactory"/>
     </bean>
 
 
