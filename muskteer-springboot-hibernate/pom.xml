@@ -21,11 +21,7 @@
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>com.ailk.ecs.udp</groupId>
-            <artifactId>UDPPOCommon</artifactId>
-            <version>0.2.1</version>
-        </dependency>
+
         <!-- https://mvnrepository.com/artifact/com.oracle/ojdbc14 -->
         <dependency>
             <groupId>com.oracle</groupId>
