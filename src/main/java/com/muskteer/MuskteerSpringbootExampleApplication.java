@@ -9,12 +9,12 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication
 public class MuskteerSpringbootExampleApplication {
 
-	@RequestMapping("/")
-	public String index(){
-		return "index,welcome to springboot";
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(MuskteerSpringbootExampleApplication.class, args);
+    }
 
-	public static void main(String[] args) {
-		SpringApplication.run(MuskteerSpringbootExampleApplication.class, args);
-	}
+    @RequestMapping("/")
+    public String index() {
+        return "index,welcome to springboot";
+    }
 }
